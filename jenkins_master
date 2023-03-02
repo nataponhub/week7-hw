@@ -15,7 +15,7 @@ pipeline {
                 script{
                     def data = readFile(file: 'data.txt')
                     def realData = data.readLines()
-                    build job: 'jenkin_slave', parameters: [string(name: 'NAME', value: realData.get(0)), string(name: 'Ages', value: realData.get(1))]
+                    build job: 'jenkins_slave', parameters: [string(name: 'NAME', value: realData.get(0)), string(name: 'Ages', value: realData.get(1))]
                 }
             }
         }
